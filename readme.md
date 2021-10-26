@@ -1,4 +1,4 @@
-For ROS
+# For ROS
 
     Python 2.8
     ROS Melodic
@@ -15,3 +15,18 @@ For ROS
 
 The default values in the launch files have been set to x = 3.0 and y = 0. Please use this values as user input to run the simulations.
 The range of coordinates is from (-5,-5) to (5,5).
+
+
+# Steps to set up a ROS project
+1) Create the workspace and source folder with command mkdir -p ws_name/src
+2) Go in src and type command catkin_init_workspace
+3) In folder ws_name type command catkin_make
+4) Go in src and type catkin_create_pkg pakage_name rospy std_msgs (other dependencies)
+5) Go back in ws_name again and type catkin_make
+6) Navigate to src/package_name/src/ and create the talker and subscriber
+7) In package_name create the launch folder and inside that create the launch file
+
+
+
+
+8)To run a ros project in ws_name type catkin_make first then source devel/setup.bash and then roslaunch <name_of_package> <name_of_launch_file>
