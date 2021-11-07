@@ -17,7 +17,7 @@ The default values in the launch files have been set to x = 3.0 and y = 0. Pleas
 The range of coordinates is from (-5,-5) to (5,5).
 
 
-# Steps to set up a ROS project
+## General steps to set up a ROS project
 1) Create the workspace and source folder with command mkdir -p ws_name/src
 2) Go in src and type command catkin_init_workspace
 3) In folder ws_name type command catkin_make
