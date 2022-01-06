@@ -19,9 +19,6 @@ roslaunch <package_name> turtlebot31_empty_world.launch
 ```
 
 
-The default values in the launch files have been set to x = 3.0 and y = 0. Please use this values as user input to run the simulations.
-The range of coordinates is from (-5,-5) to (5,5).
-
 ## Instructions - Overlaying Turtlebot package
 Overlaying can be useful when two or more packages are needed to run from your project package.
 1) In terminal navigate to turtlebot3 ros packages and type ```source devel/setup.bash```
@@ -39,7 +36,7 @@ Overlaying can be useful when two or more packages are needed to run from your p
 8)To run a ros project in ws_name type catkin_make first then source devel/setup.bash and then roslaunch <name_of_package> <name_of_launch_file>
 
 ## Project Requirements
-ROS Melodic
-Turtlebot 3 
-For normal planning
+ROS Melodic\
+Turtlebot 3 \
+For normal planning\
 Python 3.7
