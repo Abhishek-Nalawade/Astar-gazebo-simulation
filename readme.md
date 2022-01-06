@@ -10,14 +10,15 @@ git clone https://github.com/Abhishek-Nalawade/Astar-gazebo-simulation
 1) Please overlay your turtlebot3 package first (Instructions given below for overlaying)
 2) Create a ROS package and place all the files in the /package_name folder
 3) Run the code using the command
+4) Note: The orientation is to be entered in radians
 ```
 roslaunch <package_name> turtlebot31_empty_world.launch x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0
 ```
-4) To run the program with default arguments (default x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0)
+5) To run the program with default arguments (default x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0)
 ```
 roslaunch <package_name> turtlebot31_empty_world.launch
 ```
-
+6) After launching a window will pop-up showing the map using OpenCV visualization, then hit any key on the on that window to begin the simulations.
 
 ## Instructions - Overlaying Turtlebot package
 Overlaying can be useful when two or more packages are needed to run from your project package.
