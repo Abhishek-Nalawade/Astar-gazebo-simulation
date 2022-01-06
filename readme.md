@@ -1,6 +1,9 @@
 # Astar Gazebo Simulation 
 This project simulates using OpenCV as well as Gazebo, the searching and the path obtained by A* algorithm for a rigid robot in a map with obstacles.
 
+## Result:
+
+![result](results/astar.gif)
 
 ## Instructions
 1) Clone the repository using
