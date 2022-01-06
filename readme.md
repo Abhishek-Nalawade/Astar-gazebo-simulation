@@ -3,7 +3,7 @@ This project simulates using OpenCV as well as Gazebo, the searching and the pat
 
 ## Result:
 
-![result](results/astar.gif)
+![result](results/astar1.gif)
 
 ## Instructions
 1) Clone the repository using
