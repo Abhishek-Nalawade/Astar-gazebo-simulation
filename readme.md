@@ -12,11 +12,11 @@ git clone https://github.com/Abhishek-Nalawade/Astar-gazebo-simulation
 3) Run the code using the command
 4) Note: The orientation is to be entered in radians
 ```
-roslaunch <package_name> turtlebot31_empty_world.launch x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0
+roslaunch <package_name> astar_planning.launch x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0
 ```
 5) To run the program with default arguments (default x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0)
 ```
-roslaunch <package_name> turtlebot31_empty_world.launch
+roslaunch <package_name> astar_planning.launch
 ```
 6) After launching a window will pop-up showing the map using OpenCV visualization, then hit any key on the on that window to begin the simulations.
 
