@@ -38,5 +38,5 @@ Overlaying can be useful when two or more packages are needed to run from your p
 ## Project Requirements
 ROS Melodic\
 Turtlebot 3 \
-For normal planning\
+For Astar planning:\
 Python 3.7
