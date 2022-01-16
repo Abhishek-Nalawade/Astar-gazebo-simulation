@@ -12,7 +12,7 @@ git clone https://github.com/Abhishek-Nalawade/Astar-gazebo-simulation
 ```
 2) Please overlay your turtlebot3 package first (Instructions given below for overlaying)
 3) ```Create a ROS package with name "phase3"``` and paste all the files from the cloned folder inside the /package_name folder
-4) Type ```catkin_make``` and then next type source ```devel/setup.bash```
+4) Type ```catkin_make``` and then next type ```source devel/setup.bash```
 5) Run the code using the command
 6) Note: The orientation is to be entered in radians
 ```
