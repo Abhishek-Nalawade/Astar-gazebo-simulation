@@ -12,16 +12,17 @@ git clone https://github.com/Abhishek-Nalawade/Astar-gazebo-simulation
 ```
 2) Please overlay your turtlebot3 package first (Instructions given below for overlaying)
 3) ```Create a ROS package with name "phase3"``` and paste all the files from the cloned folder inside the /package_name folder
-4) Run the code using the command
-5) Note: The orientation is to be entered in radians
+4) Type ```catkin_make``` and then next type source ```devel/setup.bash```
+5) Run the code using the command
+6) Note: The orientation is to be entered in radians
 ```
 roslaunch <package_name> astar_planning.launch x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0
 ```
-6) To run the program with default arguments (default x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0)
+7) To run the program with default arguments (default x_pos:=3 y_pos:=0 start_orientation:=0 x_goal_pos:=0 y_goal_pos:=3 goal_orientation:=0)
 ```
 roslaunch <package_name> astar_planning.launch
 ```
-7) After launching a window will pop-up showing the map using OpenCV visualization, then hit any key on the on that window to begin the simulations.
+8) After launching a window will pop-up showing the map using OpenCV visualization, then hit any key on the on that window to begin the simulations.
 
 ## Instructions - Overlaying Turtlebot package
 Overlaying can be useful when two or more packages are needed to run from your project package.
