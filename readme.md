@@ -1,4 +1,6 @@
 # Astar Gazebo Simulation 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
+---
 This project simulates using OpenCV as well as Gazebo, the searching and the path obtained by A* algorithm for a rigid robot in a map with obstacles.
 
 ## Result:
