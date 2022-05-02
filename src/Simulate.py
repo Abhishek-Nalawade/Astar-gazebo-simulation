@@ -1,22 +1,22 @@
 #!/usr/bin/env python
-from Project3Phase3_classes import *
+from Astar import *
 import rospy
 from geometry_msgs.msg import Twist
 import sys
 
-
+"""
+@brief Function that initializes the map
+@details Takes input from user via command line arguments and checks if the
+         entered coordinates lie in obstacle space.
+@return Returns the start and goal pose, map, map dimensions and a flag for
+        entered coordinates being in obstacle space
+"""
 def initiate_Astar():
     obs_check = 0
-    map = world([10,10])
+    map = World([10,10])
     canvas, canvas_size, scale = map.prepare_canvas()
 
     while True:
-        # x1 = input("Enter the x co-ordinate of the start point: ")
-        # y1 = input("Enter the y co-ordinate of the start point: ")
-        # st_theta = input("Enter the orientation of start point: ")
-        # x2 = input("Enter the x co-ordinate of the goal point: ")
-        # y2 = input("Enter the y co-ordinate of the goal point: ")
-        # gl_theta = input("Enter the orientation of goal point: ")
         x1 = sys.argv[1]
         y1 = sys.argv[2]
         st_theta = sys.argv[3]
@@ -44,16 +44,10 @@ def initiate_Astar():
     cv2.waitKey(0)
     return [start1,start_orient], [goal1,goal_orient], canvas, canvas_size, scale, obs_check
 
-start, goal, canvas, c_size, factor, obs_check = initiate_Astar()
-astar = Astar(start, goal, canvas, c_size, factor)
-if obs_check == 0:
-    ultimate_path = astar.run_Astar()
-else:
-    print()
-    print("\n\n\n\nOne of the either point is in obstacles or out of map boundary\nPlease try again\n\n\n\n\n")
-#print("ultimate path ",ultimate_path)
-#print("action set",actions_set)
-
+"""
+@brief Function that initializes the publisher
+@param path: contains the list of velocites and time required for publishing
+"""
 def talker(path):
     msg = Twist()
     pub = rospy.Publisher('/cmd_vel',Twist,queue_size=10)
@@ -73,9 +67,29 @@ def talker(path):
     msg.linear.x = 0
     msg.angular.z = 0
     pub.publish(msg)
+    return
 
-new_path = list()
-for i in range(len(ultimate_path)):
-    new_path.append(ultimate_path.pop())
-print("reversed ",new_path)
-talker(new_path)
+"""
+@brief Initializes the main code and finds the path to the goal
+@details Finds the path from start to goal location using Astar Planner
+"""
+def main():
+    start, goal, canvas, c_size, factor, obs_check = initiate_Astar()
+    astar = Astar(start, goal, canvas, c_size, factor)
+    if obs_check == 0:
+        ultimate_path = astar.run_Astar()
+    else:
+        print("\n\n\n\nOne of the either point is in obstacles or out of map boundary\nPlease try again\n\n\n\n\n")
+    #print("ultimate path ",ultimate_path)
+    #print("action set",actions_set)
+
+
+    new_path = list()
+    for i in range(len(ultimate_path)):
+        new_path.append(ultimate_path.pop())
+    print("reversed ",new_path)
+    talker(new_path)
+    return
+
+if __name__ == '__main__':
+    main()

@@ -23,7 +23,7 @@
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg start_orientation) -param robot_description" />
 
   <node pkg = "phase3"
-        type = "Project3Phase3_main.py"
+        type = "Simulate.py"
         name = "talker"
 	args = "$(arg x_pos) $(arg y_pos) $(arg start_orientation) $(arg x_goal_pos) $(arg y_goal_pos) $(arg goal_orientation)"
         output = "screen"/>
