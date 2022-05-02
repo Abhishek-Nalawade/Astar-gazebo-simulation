@@ -47,3 +47,4 @@ ROS Melodic\
 Turtlebot 3 \
 For Astar planning:\
 Python 3.7
+OpenCV
