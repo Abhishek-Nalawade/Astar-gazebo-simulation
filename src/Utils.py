@@ -62,7 +62,7 @@ class Node():
 class World():
     def __init__(self,map_size):
         self.robot_radius = 0.105
-        self.clearance = 0.01
+        self.clearance = 0.05    # 0.01
         self.cl = self.robot_radius + self.clearance
         self.scale = 80
         self.canvas_size = map_size
