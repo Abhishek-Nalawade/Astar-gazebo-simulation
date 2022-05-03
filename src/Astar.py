@@ -129,8 +129,8 @@ class Astar():
             return Node([Yn,Xn],Thetan,D,currentnode,idx,t,intermediate_path)
 
         children = list()
-        # actions = [[10,10],[5,0],[0,5],[5,10],[10,5]]
-        actions = [[10,10],[5,2],[2,5],[5,10],[10,5]]
+        actions = [[10,10],[5,0],[0,5],[5,10],[10,5]]
+        # actions = [[10,10],[5,2],[2,5],[5,10],[10,5]]
         for action in actions:
             ind = actions.index(action)
             children.append(perform(currentnode, ind, action[0],action[1]))
@@ -161,7 +161,7 @@ class Astar():
                     print("\n Goal has been reached \n")
                     return child
                 else:
-                    heuristic_cost = child.cost + (1.2*self.euclidean_distance(child))
+                    heuristic_cost = child.cost + (1.1*self.euclidean_distance(child))
                     self.queue.add(child, heuristic_cost)
         return None
 
